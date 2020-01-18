@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/chasen/Documents/CodeBase/mysat/solver.cpp" "/Users/chasen/Documents/CodeBase/mysat/cmake-build-debug/CMakeFiles/mysat.dir/solver.cpp.o"
+  "/Users/chasen/Documents/CodeBase/tinysat/CNF.cpp" "/Users/chasen/Documents/CodeBase/tinysat/cmake-build-debug/CMakeFiles/mysat.dir/CNF.cpp.o"
+  "/Users/chasen/Documents/CodeBase/tinysat/solver.cpp" "/Users/chasen/Documents/CodeBase/tinysat/cmake-build-debug/CMakeFiles/mysat.dir/solver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

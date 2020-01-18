@@ -50,7 +50,7 @@ public:
     ~DisClause();
 
     /*get the literal term items*/
-    vector<LiteralTerm> getLiteralTermItems();
+    const vector<LiteralTerm>& getLiteralTermItems();
 
     /*print the disjunctive clause*/
     string getString();
@@ -68,7 +68,7 @@ public:
     ~CNF();
 
     /*get the disjunctive clause items*/
-    vector<DisClause> getDisjunctiveClauseItems();
+    const vector<DisClause>& getDisjunctiveClauseItems();
 
     /* print the disjunctive clause */
     string getString();

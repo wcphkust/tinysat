@@ -1,4 +1,7 @@
-module 1: conjunctive normal form  (x or (not y)) and (x)
+# module 1: conjunctive normal form
+  - CNF.h/cpp: Definition of LiteralTerm, DisClause and CNF
+    - example:  (x or (not y)) and (x)
+  - CNFParser.h/cpp: convert string to LiteralTerm, DisClause and CNF
 
 module 2: solver
   input: CNF
@@ -6,3 +9,5 @@ module 2: solver
   method 1: brute force searching
   method 2: dpll
   method 3: advanced method
+
+

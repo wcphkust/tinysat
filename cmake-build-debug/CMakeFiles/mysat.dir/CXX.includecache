@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/chasen/Documents/CodeBase/mysat/CNF.h
+/Users/chasen/Documents/CodeBase/tinysat/CNF.h
 vector
 -
 string
 -
 
-/Users/chasen/Documents/CodeBase/mysat/solver.cpp
+/Users/chasen/Documents/CodeBase/tinysat/solver.cpp
 iostream
 -
 CNF.h
-/Users/chasen/Documents/CodeBase/mysat/CNF.h
+/Users/chasen/Documents/CodeBase/tinysat/CNF.h
 

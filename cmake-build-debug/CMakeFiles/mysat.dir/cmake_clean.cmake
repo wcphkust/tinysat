@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mysat.dir/CNF.cpp.o"
   "CMakeFiles/mysat.dir/solver.cpp.o"
-  "mysat.pdb"
   "mysat"
+  "mysat.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

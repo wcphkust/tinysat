@@ -3,5 +3,5 @@ project(mysat)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES solver.cpp)
+set(SOURCE_FILES solver.cpp CNF.cpp)
 add_executable(mysat ${SOURCE_FILES})

@@ -8,18 +8,27 @@
 using namespace std;
 
 int main() {
-    LiteralTerm a = LiteralTerm("a");
-    LiteralTerm b = LiteralTerm("b");
+    LiteralTerm a = LiteralTerm("a", pos);
+    LiteralTerm b = LiteralTerm("b", neg);
+    LiteralTerm c = LiteralTerm("c", pos);
 
-    vector<LiteralTerm> p_literal_items;
-    p_literal_items.push_back(a);
-    p_literal_items.push_back(b);
-    DisClause disjunctive_clause(p_literal_items);
+    vector<LiteralTerm> p_literal_items_1;
+    p_literal_items_1.push_back(a);
+    p_literal_items_1.push_back(b);
+    p_literal_items_1.push_back(c);
+    DisClause disjunctive_clause1(p_literal_items_1);
+
+    vector<LiteralTerm> p_literal_items_2;
+    p_literal_items_2.push_back(a);
+//    p_literal_items_2.push_back(b);
+//    p_literal_items_2.push_back(c);
+    DisClause disjunctive_clause2(p_literal_items_2);
 
     vector<DisClause> p_disjunctive_clause_items;
-    p_disjunctive_clause_items.push_back(disjunctive_clause);
+    p_disjunctive_clause_items.push_back(disjunctive_clause1);
+    p_disjunctive_clause_items.push_back(disjunctive_clause2);
+
     CNF cnf(p_disjunctive_clause_items);
-    cout << "test" << endl;
     cout << cnf.getString() << endl;
 
     return 0;

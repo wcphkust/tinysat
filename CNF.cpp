@@ -31,13 +31,8 @@ Sign LiteralTerm::getSign() {
 }
 
 string LiteralTerm::getString() {
-    string str = literal;
-    string signStr = "";
-    if (sign == neg) {
-        signStr = "not";
-        string tmpStr = signStr + " " + literal;
-        str = "(" + tmpStr + ")";
-    }
+    string str = (sign == neg) ? ("not " + literal) : literal;
+    str = "(" + str + ")";
     return str;
 }
 
@@ -52,7 +47,7 @@ DisClause::~DisClause() {
 
 }
 
-vector<LiteralTerm> DisClause::getLiteralTermItems() {
+const vector<LiteralTerm>& DisClause::getLiteralTermItems() {
     return literal_term_items;
 }
 
@@ -66,6 +61,7 @@ string DisClause::getString() {
             str = str + " " + "and" + " " + literal_term_items[i].getString();
         }
     }
+    str = "(" + str + ")";
     return str;
 }
 
@@ -80,7 +76,7 @@ CNF::~CNF() {
 
 }
 
-vector<DisClause> CNF::getDisjunctiveClauseItems() {
+const vector<DisClause>& CNF::getDisjunctiveClauseItems() {
     return disjunctive_clause_items;
 }
 
@@ -94,5 +90,6 @@ string CNF::getString() {
             str = str + " " + "and" + " " + disjunctive_clause_items[i].getString();
         }
     }
+    str = "(" + str + ")";
     return str;
 }

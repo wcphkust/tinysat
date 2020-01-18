@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/mysat.dir/solver.cpp.o  -o mysat 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/mysat.dir/solver.cpp.o CMakeFiles/mysat.dir/CNF.cpp.o  -o mysat 
