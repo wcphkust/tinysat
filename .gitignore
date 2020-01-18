@@ -1,4 +1,4 @@
 *.bin
 *.cmake
 *.log
-cmake-build-debug/*
+cmake-build-debug
