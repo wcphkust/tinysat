@@ -1,0 +1,8 @@
+module 1: conjunctive normal form  (x or (not y)) and (x)
+
+module 2: solver
+  input: CNF
+  output: SAT(give a solution) or UNSAT
+  method 1: brute force searching
+  method 2: dpll
+  method 3: advanced method

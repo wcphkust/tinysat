@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/chasen/Documents/CodeBase/mysat/CNF.h
+vector
+-
+string
+-
+
+/Users/chasen/Documents/CodeBase/mysat/solver.cpp
+iostream
+-
+CNF.h
+/Users/chasen/Documents/CodeBase/mysat/CNF.h
+
