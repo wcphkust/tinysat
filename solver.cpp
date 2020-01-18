@@ -31,7 +31,5 @@ int main() {
     CNF cnf(p_disjunctive_clause_items);
     cout << cnf.getString() << endl;
 
-    cout << "finished" << endl;
-
     return 0;
 }
