@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 int main() {
     LiteralTerm a = LiteralTerm("a", pos);
     LiteralTerm b = LiteralTerm("b", neg);
@@ -29,6 +30,7 @@ int main() {
     p_disjunctive_clause_items.push_back(disjunctive_clause2);
 
     CNF cnf(p_disjunctive_clause_items);
+    echo_value(cnf.getValue());
     cout << cnf.getString() << endl;
 
     return 0;
