@@ -1,8 +1,8 @@
-//
-// Created by Sunshine on 16/1/2020.
-//
-#ifndef CNF_H
-#define CNF_H
+/*
+* Created by Sunshine on 16/1/2020.
+*/
+#ifndef MYSAT_CNF_H
+#define MYSAT_CNF_H
 
 #include <vector>
 #include <string>
@@ -11,58 +11,27 @@
 
 using namespace std;
 
+/*
+ * The sign of literal in LiteralTerm
+ */
 enum Sign {
     pos,
     neg
 };
 
+/*
+ * The value of literal
+ */
 enum Value {
     one,
     zero,
     half,
-    undefined
+    undef
 };
 
-Value operator && (Value const& v1, Value const& v2) {
-    if (v1 == one and v2 == one) {
-        return one;
-    }
-    if (v1 == zero or v2 == zero) {
-        return zero;
-    }
-    return half;
-}
-
-Value operator || (Value const& v1, Value const& v2) {
-    if (v1 == one or v2 == one) {
-        return one;
-    }
-    if (v1 == zero and v2 == zero) {
-        return zero;
-    }
-    return half;
-}
-
-void echo_value(Value val) {
-    switch(val) {
-        case one: {
-            cout << "one" << endl;
-            break;
-        }
-        case zero: {
-            cout << "zero" << endl;
-            break;
-        }
-        case half: {
-            cout << "half" << endl;
-            break;
-        }
-        case undefined: {
-            cout << "undefined" << endl;
-            break;
-        }
-    }
-}
+Value operator || (Value const& v1, Value const& v2);
+Value operator && (Value const& v1, Value const& v2);
+void echo_value(Value val);
 
 /*
  * The Literal Term

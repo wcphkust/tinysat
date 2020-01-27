@@ -1,9 +1,59 @@
-//
-// Created by Sunshine on 16/1/2020.
-//
+/*
+* Created by Sunshine on 16/1/2020.
+*/
 
 # include "CNF.h"
 # include <string>
+
+/*
+ * Echo the value
+ */
+void echo_value(Value val) {
+    switch(val) {
+        case one: {
+            cout << "one" << endl;
+            break;
+        }
+        case zero: {
+            cout << "zero" << endl;
+            break;
+        }
+        case half: {
+            cout << "half" << endl;
+            break;
+        }
+        case undef: {
+            cout << "undef" << endl;
+            break;
+        }
+    }
+}
+
+/*
+ * Reload && for Value with support for 3-valued logic
+ */
+Value operator && (Value const& v1, Value const& v2) {
+    if (v1 == one and v2 == one) {
+        return one;
+    }
+    if (v1 == zero or v2 == zero) {
+        return zero;
+    }
+    return half;
+}
+
+/*
+ * Reload || for Value with support for 3-valued logic
+ */
+Value operator || (Value const& v1, Value const& v2) {
+    if (v1 == one or v2 == one) {
+        return one;
+    }
+    if (v1 == zero and v2 == zero) {
+        return zero;
+    }
+    return half;
+}
 
 /*
  * The implementation of LiteralTerm
@@ -11,14 +61,14 @@
 LiteralTerm::LiteralTerm(string p_literal) {
     literal = p_literal;
     sign = pos;
-    ip = undefined;
+    ip = undef;
 }
 
 
 LiteralTerm::LiteralTerm(string p_literal, Sign p_sign) {
     literal = p_literal;
     sign = p_sign;
-    ip = undefined;
+    ip = undef;
 }
 
 
@@ -54,7 +104,7 @@ string LiteralTerm::getString() {
  */
 DisClause::DisClause(vector <LiteralTerm> p_literal_term_items) {
     literal_term_items = p_literal_term_items;
-    clause_ip = undefined;
+    clause_ip = undef;
 }
 
 
@@ -72,14 +122,14 @@ Value DisClause::evaluate() {
     int size = literal_term_items.size();
     Value evaluated_ip = literal_term_items[0].getValue();
     for (int i = 1; i < size; i++) {
-        evaluated_ip = (evaluated_ip || literal_term_items[i].getValue());
+          evaluated_ip = (evaluated_ip || literal_term_items[i].getValue());
     }
     return evaluated_ip;
 }
 
 
 Value DisClause::getValue() {
-    if (clause_ip == undefined) {
+    if (clause_ip == undef) {
         clause_ip = evaluate();
     }
     return clause_ip;
@@ -132,7 +182,7 @@ Value CNF::evaluate() {
 
 
 Value CNF::getValue() {
-    if (cnf_ip == undefined) {
+    if (cnf_ip == undef) {
         cnf_ip = evaluate();
     }
     return cnf_ip;

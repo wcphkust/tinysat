@@ -1,6 +1,6 @@
-//
-// Created by Sunshine on 16/1/2020.
-//
+/*
+* Created by Sunshine on 16/1/2020.
+*/
 
 #include <iostream>
 #include "CNF.h"
