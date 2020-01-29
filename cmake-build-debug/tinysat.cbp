@@ -82,13 +82,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/CNF.cpp">
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/CNF.cpp">
 			<Option target="tinysat"/>
 		</Unit>
-		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/CNF.h">
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/CNF.h">
 			<Option target="tinysat"/>
 		</Unit>
-		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/solver.cpp">
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/DisClause.cpp">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/DisClause.h">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/LiteralTerm.cpp">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/LiteralTerm.h">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/Utils.cpp">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/Utils.h">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/solver.cpp">
 			<Option target="tinysat"/>
 		</Unit>
 		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/CMakeLists.txt">

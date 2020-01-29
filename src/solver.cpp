@@ -3,10 +3,8 @@
 */
 
 #include <iostream>
-#include "CNF.h"
-
-using namespace std;
-
+#include "Logic/CNF.h"
+#include "Logic/DisClause.h"
 
 int main() {
     LiteralTerm a = LiteralTerm("a", pos);
@@ -21,8 +19,8 @@ int main() {
 
     vector<LiteralTerm> p_literal_items_2;
     p_literal_items_2.push_back(a);
-//    p_literal_items_2.push_back(b);
-//    p_literal_items_2.push_back(c);
+    p_literal_items_2.push_back(b);
+    p_literal_items_2.push_back(c);
     DisClause disjunctive_clause2(p_literal_items_2);
 
     vector<DisClause> p_disjunctive_clause_items;
@@ -31,7 +29,7 @@ int main() {
 
     CNF cnf(p_disjunctive_clause_items);
     echo_value(cnf.getValue());
-    cout << cnf.getString() << endl;
+    std::cout << cnf.getString() << std::endl;
 
     return 0;
 }

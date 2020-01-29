@@ -123,59 +123,140 @@ tinysat/fast:
 	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/build
 .PHONY : tinysat/fast
 
-CNF.o: CNF.cpp.o
+src/Logic/CNF.o: src/Logic/CNF.cpp.o
 
-.PHONY : CNF.o
-
-# target to build an object file
-CNF.cpp.o:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/CNF.cpp.o
-.PHONY : CNF.cpp.o
-
-CNF.i: CNF.cpp.i
-
-.PHONY : CNF.i
-
-# target to preprocess a source file
-CNF.cpp.i:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/CNF.cpp.i
-.PHONY : CNF.cpp.i
-
-CNF.s: CNF.cpp.s
-
-.PHONY : CNF.s
-
-# target to generate assembly for a file
-CNF.cpp.s:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/CNF.cpp.s
-.PHONY : CNF.cpp.s
-
-solver.o: solver.cpp.o
-
-.PHONY : solver.o
+.PHONY : src/Logic/CNF.o
 
 # target to build an object file
-solver.cpp.o:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/solver.cpp.o
-.PHONY : solver.cpp.o
+src/Logic/CNF.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/CNF.cpp.o
+.PHONY : src/Logic/CNF.cpp.o
 
-solver.i: solver.cpp.i
+src/Logic/CNF.i: src/Logic/CNF.cpp.i
 
-.PHONY : solver.i
+.PHONY : src/Logic/CNF.i
 
 # target to preprocess a source file
-solver.cpp.i:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/solver.cpp.i
-.PHONY : solver.cpp.i
+src/Logic/CNF.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/CNF.cpp.i
+.PHONY : src/Logic/CNF.cpp.i
 
-solver.s: solver.cpp.s
+src/Logic/CNF.s: src/Logic/CNF.cpp.s
 
-.PHONY : solver.s
+.PHONY : src/Logic/CNF.s
 
 # target to generate assembly for a file
-solver.cpp.s:
-	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/solver.cpp.s
-.PHONY : solver.cpp.s
+src/Logic/CNF.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/CNF.cpp.s
+.PHONY : src/Logic/CNF.cpp.s
+
+src/Logic/DisClause.o: src/Logic/DisClause.cpp.o
+
+.PHONY : src/Logic/DisClause.o
+
+# target to build an object file
+src/Logic/DisClause.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/DisClause.cpp.o
+.PHONY : src/Logic/DisClause.cpp.o
+
+src/Logic/DisClause.i: src/Logic/DisClause.cpp.i
+
+.PHONY : src/Logic/DisClause.i
+
+# target to preprocess a source file
+src/Logic/DisClause.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/DisClause.cpp.i
+.PHONY : src/Logic/DisClause.cpp.i
+
+src/Logic/DisClause.s: src/Logic/DisClause.cpp.s
+
+.PHONY : src/Logic/DisClause.s
+
+# target to generate assembly for a file
+src/Logic/DisClause.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/DisClause.cpp.s
+.PHONY : src/Logic/DisClause.cpp.s
+
+src/Logic/LiteralTerm.o: src/Logic/LiteralTerm.cpp.o
+
+.PHONY : src/Logic/LiteralTerm.o
+
+# target to build an object file
+src/Logic/LiteralTerm.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/LiteralTerm.cpp.o
+.PHONY : src/Logic/LiteralTerm.cpp.o
+
+src/Logic/LiteralTerm.i: src/Logic/LiteralTerm.cpp.i
+
+.PHONY : src/Logic/LiteralTerm.i
+
+# target to preprocess a source file
+src/Logic/LiteralTerm.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/LiteralTerm.cpp.i
+.PHONY : src/Logic/LiteralTerm.cpp.i
+
+src/Logic/LiteralTerm.s: src/Logic/LiteralTerm.cpp.s
+
+.PHONY : src/Logic/LiteralTerm.s
+
+# target to generate assembly for a file
+src/Logic/LiteralTerm.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/LiteralTerm.cpp.s
+.PHONY : src/Logic/LiteralTerm.cpp.s
+
+src/Logic/Utils.o: src/Logic/Utils.cpp.o
+
+.PHONY : src/Logic/Utils.o
+
+# target to build an object file
+src/Logic/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Utils.cpp.o
+.PHONY : src/Logic/Utils.cpp.o
+
+src/Logic/Utils.i: src/Logic/Utils.cpp.i
+
+.PHONY : src/Logic/Utils.i
+
+# target to preprocess a source file
+src/Logic/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Utils.cpp.i
+.PHONY : src/Logic/Utils.cpp.i
+
+src/Logic/Utils.s: src/Logic/Utils.cpp.s
+
+.PHONY : src/Logic/Utils.s
+
+# target to generate assembly for a file
+src/Logic/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Utils.cpp.s
+.PHONY : src/Logic/Utils.cpp.s
+
+src/solver.o: src/solver.cpp.o
+
+.PHONY : src/solver.o
+
+# target to build an object file
+src/solver.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/solver.cpp.o
+.PHONY : src/solver.cpp.o
+
+src/solver.i: src/solver.cpp.i
+
+.PHONY : src/solver.i
+
+# target to preprocess a source file
+src/solver.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/solver.cpp.i
+.PHONY : src/solver.cpp.i
+
+src/solver.s: src/solver.cpp.s
+
+.PHONY : src/solver.s
+
+# target to generate assembly for a file
+src/solver.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/solver.cpp.s
+.PHONY : src/solver.cpp.s
 
 # Help Target
 help:
@@ -186,12 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... tinysat"
-	@echo "... CNF.o"
-	@echo "... CNF.i"
-	@echo "... CNF.s"
-	@echo "... solver.o"
-	@echo "... solver.i"
-	@echo "... solver.s"
+	@echo "... src/Logic/CNF.o"
+	@echo "... src/Logic/CNF.i"
+	@echo "... src/Logic/CNF.s"
+	@echo "... src/Logic/DisClause.o"
+	@echo "... src/Logic/DisClause.i"
+	@echo "... src/Logic/DisClause.s"
+	@echo "... src/Logic/LiteralTerm.o"
+	@echo "... src/Logic/LiteralTerm.i"
+	@echo "... src/Logic/LiteralTerm.s"
+	@echo "... src/Logic/Utils.o"
+	@echo "... src/Logic/Utils.i"
+	@echo "... src/Logic/Utils.s"
+	@echo "... src/solver.o"
+	@echo "... src/solver.i"
+	@echo "... src/solver.s"
 .PHONY : help
 
 
