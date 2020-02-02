@@ -30,7 +30,7 @@ void echo_value(Value val) {
 }
 
 /*
- * Reload && for Value with support for 3-valued logic
+ * Overload && for Value with support for 3-valued logic
  */
 Value operator && (Value const& v1, Value const& v2) {
     if (v1 == one and v2 == one) {
@@ -43,7 +43,7 @@ Value operator && (Value const& v1, Value const& v2) {
 }
 
 /*
- * Reload || for Value with support for 3-valued logic
+ * Overload || for Value with support for 3-valued logic
  */
 Value operator || (Value const& v1, Value const& v2) {
     if (v1 == one or v2 == one) {

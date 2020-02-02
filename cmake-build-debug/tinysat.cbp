@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/IOUtil/cnfreader.cpp">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/IOUtil/cnfreader.h">
+			<Option target="tinysat"/>
+		</Unit>
 		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/CNF.cpp">
 			<Option target="tinysat"/>
 		</Unit>

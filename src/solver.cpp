@@ -5,11 +5,12 @@
 #include <iostream>
 #include "Logic/CNF.h"
 #include "Logic/DisClause.h"
+#include "IOUtil/cnfreader.h"
 
-int main() {
-    LiteralTerm a = LiteralTerm("a", pos);
-    LiteralTerm b = LiteralTerm("b", neg);
-    LiteralTerm c = LiteralTerm("c", pos);
+void test() {
+    LiteralTerm b("b", pos);
+    LiteralTerm a("a", pos);
+    LiteralTerm c("c", pos);
 
     vector<LiteralTerm> p_literal_items_1;
     p_literal_items_1.push_back(a);
@@ -30,6 +31,10 @@ int main() {
     CNF cnf(p_disjunctive_clause_items);
     echo_value(cnf.getValue());
     std::cout << cnf.getString() << std::endl;
+}
 
+int main() {
+    CNF cnf = getCNFFromFile();
+    std::cout << cnf.getString() << std::endl;
     return 0;
 }

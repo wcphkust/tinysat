@@ -5,6 +5,9 @@
 #define TINYSAT_CNF_H
 
 #include "DisClause.h"
+#include <map>
+
+using std::map;
 
 /*
  * Conjunctive Normal Form
@@ -19,7 +22,7 @@
 class CNF {
 public:
     vector<DisClause> disjunctive_clause_items;
-    vector<int> ipvector;
+//    map<LiteralTerm, Value> interpretation;
     Value cnf_ip;
 
 public:

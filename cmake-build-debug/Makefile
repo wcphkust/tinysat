@@ -123,6 +123,33 @@ tinysat/fast:
 	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/build
 .PHONY : tinysat/fast
 
+src/IOUtil/cnfreader.o: src/IOUtil/cnfreader.cpp.o
+
+.PHONY : src/IOUtil/cnfreader.o
+
+# target to build an object file
+src/IOUtil/cnfreader.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/IOUtil/cnfreader.cpp.o
+.PHONY : src/IOUtil/cnfreader.cpp.o
+
+src/IOUtil/cnfreader.i: src/IOUtil/cnfreader.cpp.i
+
+.PHONY : src/IOUtil/cnfreader.i
+
+# target to preprocess a source file
+src/IOUtil/cnfreader.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/IOUtil/cnfreader.cpp.i
+.PHONY : src/IOUtil/cnfreader.cpp.i
+
+src/IOUtil/cnfreader.s: src/IOUtil/cnfreader.cpp.s
+
+.PHONY : src/IOUtil/cnfreader.s
+
+# target to generate assembly for a file
+src/IOUtil/cnfreader.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/IOUtil/cnfreader.cpp.s
+.PHONY : src/IOUtil/cnfreader.cpp.s
+
 src/Logic/CNF.o: src/Logic/CNF.cpp.o
 
 .PHONY : src/Logic/CNF.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... tinysat"
+	@echo "... src/IOUtil/cnfreader.o"
+	@echo "... src/IOUtil/cnfreader.i"
+	@echo "... src/IOUtil/cnfreader.s"
 	@echo "... src/Logic/CNF.o"
 	@echo "... src/Logic/CNF.i"
 	@echo "... src/Logic/CNF.s"
