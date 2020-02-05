@@ -204,6 +204,33 @@ src/Logic/DisClause.cpp.s:
 	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/DisClause.cpp.s
 .PHONY : src/Logic/DisClause.cpp.s
 
+src/Logic/Literal.o: src/Logic/Literal.cpp.o
+
+.PHONY : src/Logic/Literal.o
+
+# target to build an object file
+src/Logic/Literal.cpp.o:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Literal.cpp.o
+.PHONY : src/Logic/Literal.cpp.o
+
+src/Logic/Literal.i: src/Logic/Literal.cpp.i
+
+.PHONY : src/Logic/Literal.i
+
+# target to preprocess a source file
+src/Logic/Literal.cpp.i:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Literal.cpp.i
+.PHONY : src/Logic/Literal.cpp.i
+
+src/Logic/Literal.s: src/Logic/Literal.cpp.s
+
+.PHONY : src/Logic/Literal.s
+
+# target to generate assembly for a file
+src/Logic/Literal.cpp.s:
+	$(MAKE) -f CMakeFiles/tinysat.dir/build.make CMakeFiles/tinysat.dir/src/Logic/Literal.cpp.s
+.PHONY : src/Logic/Literal.cpp.s
+
 src/Logic/LiteralTerm.o: src/Logic/LiteralTerm.cpp.o
 
 .PHONY : src/Logic/LiteralTerm.o
@@ -303,6 +330,9 @@ help:
 	@echo "... src/Logic/DisClause.o"
 	@echo "... src/Logic/DisClause.i"
 	@echo "... src/Logic/DisClause.s"
+	@echo "... src/Logic/Literal.o"
+	@echo "... src/Logic/Literal.i"
+	@echo "... src/Logic/Literal.s"
 	@echo "... src/Logic/LiteralTerm.o"
 	@echo "... src/Logic/LiteralTerm.i"
 	@echo "... src/Logic/LiteralTerm.s"

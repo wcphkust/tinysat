@@ -2,6 +2,7 @@
 // Created by chasen on 2/2/2020.
 //
 
+#include "cnfreader.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -10,13 +11,19 @@
 #include <unistd.h>
 #include "../Logic/CNF.h"
 #include "../Logic/Utils.h"
+#include "../Logic/Literal.h"
 
 using std::stringstream;
 
 const string EQUATION_BASE = "/Users/chasen/Documents/CodeBase/Solver/tinysat/data/";
 
-string trim(string s)
-{
+/* The implementation of CNFReader */
+CNFReader::CNFReader() {
+    literalSet = set<Literal>();
+}
+
+
+string CNFReader::trim(string s) {
     const char ch = ' ';
     s.erase(s.find_last_not_of(" ") + 1);
     s.erase(0, s.find_first_not_of(" "));
@@ -24,7 +31,13 @@ string trim(string s)
 }
 
 
-DisClause getClauseTermFileByLine(string s) {
+/* The implementation of CNFFileReader */
+CNFFileReader::CNFFileReader(string fileName) {
+
+}
+
+
+DisClause CNFFileReader::getClauseTermFileByLine(string s) {
     vector<string> stokens;
     string token;
     stringstream input(s);
@@ -33,10 +46,11 @@ DisClause getClauseTermFileByLine(string s) {
     }
 
     vector<LiteralTerm> p_literal_items;
-    for (int i = 0; i < stokens.size() - 1; i++) {
+    int size = stokens.size();
+    for (int i = 0; i < size - 1; i++) {
         Sign sn = (stokens[i] == "+") ? pos : neg;
         int j = i + 1;
-        LiteralTerm term(stokens[j], sn);
+        LiteralTerm term(Literal(stokens[i]), sn);
         i = j;
         p_literal_items.push_back(term);
     }
@@ -46,7 +60,7 @@ DisClause getClauseTermFileByLine(string s) {
 }
 
 
-CNF getCNFFromFile(string filename="equation1") {
+CNF CNFFileReader::getCNFFromFile(string filename) {
     string s;
     vector<DisClause> p_disjunctive_clause_items;
     std::ifstream fin(EQUATION_BASE + filename);
@@ -60,8 +74,14 @@ CNF getCNFFromFile(string filename="equation1") {
     return cnf;
 }
 
+/* The implementation of CNFConsoleReader */
 
-LiteralTerm getLiteralTermFromConsoleLine(string s) {
+//TODO
+CNFConsoleReader::CNFConsoleReader() {
+
+}
+
+LiteralTerm CNFConsoleReader::getLiteralTermFromConsoleLine(string s) {
     int index = s.find("|");
     string literal = trim(s.substr(0, index));
     string sign = trim(s.substr(index + 1));
@@ -70,9 +90,8 @@ LiteralTerm getLiteralTermFromConsoleLine(string s) {
     return term;
 }
 
-
 // TODO Need to Debug
-CNF getCNFFromConsole() {
+CNF CNFConsoleReader::getCNFFromConsole() {
     std::cout << "input the number of disjunctions" << std::endl;
     int n;
     string s;
@@ -102,4 +121,3 @@ CNF getCNFFromConsole() {
     CNF cnf = CNF(p_disjunctive_clause_items);
     return cnf;
 }
-

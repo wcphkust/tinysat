@@ -15,7 +15,7 @@ using std::vector;
  */
 class DisClause {
 public:
-    vector<LiteralTerm> literal_term_items;
+    vector<LiteralTerm*> literal_term_items;
     Value clause_ip;
 
 public:

@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Utils.h"
+#include "Literal.h"
 
 using std::string;
 
@@ -15,13 +16,13 @@ using std::string;
  */
 class LiteralTerm {
 public:
-    string literal;
+    Literal* literal;
     Sign sign;
     Value ip;
 
 public:
-    LiteralTerm(string p_literal);
-    LiteralTerm(string p_literal, Sign p_sign);
+    LiteralTerm(Literal p_literal);
+    LiteralTerm(Literal p_literal, Sign p_sign);
     ~LiteralTerm();
 
     /* get the literal */
@@ -33,7 +34,7 @@ public:
     /* evaluate */
     Value getValue();
 
-    /* print the literal */
+    /* print the literal term */
     string getString();
 };
 

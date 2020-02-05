@@ -6,11 +6,12 @@
 #include "Logic/CNF.h"
 #include "Logic/DisClause.h"
 #include "IOUtil/cnfreader.h"
+#include "Logic/Literal.h"
 
 void test() {
-    LiteralTerm b("b", pos);
-    LiteralTerm a("a", pos);
-    LiteralTerm c("c", pos);
+    LiteralTerm b(Literal("b"), pos);
+    LiteralTerm a(Literal("a"), pos);
+    LiteralTerm c(Literal("c"), pos);
 
     vector<LiteralTerm> p_literal_items_1;
     p_literal_items_1.push_back(a);

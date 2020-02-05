@@ -100,6 +100,12 @@
 		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/DisClause.h">
 			<Option target="tinysat"/>
 		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/Literal.cpp">
+			<Option target="tinysat"/>
+		</Unit>
+		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/Literal.h">
+			<Option target="tinysat"/>
+		</Unit>
 		<Unit filename="/Users/chasen/Documents/CodeBase/Solver/tinysat/src/Logic/LiteralTerm.cpp">
 			<Option target="tinysat"/>
 		</Unit>

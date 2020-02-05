@@ -6,8 +6,10 @@
 
 #include "DisClause.h"
 #include <map>
+#include <set>
 
 using std::map;
+using std::set;
 
 /*
  * Conjunctive Normal Form
@@ -21,8 +23,8 @@ using std::map;
  */
 class CNF {
 public:
-    vector<DisClause> disjunctive_clause_items;
-//    map<LiteralTerm, Value> interpretation;
+    vector<DisClause*> disjunctive_clause_items;
+    // map<Literal, Value> interpretation;
     Value cnf_ip;
 
 public:

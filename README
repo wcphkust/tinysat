@@ -10,4 +10,7 @@ module 2: solver
   method 2: dpll
   method 3: advanced method
 
+TODO:
+  index of literal
+
 
